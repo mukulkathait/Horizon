@@ -20,7 +20,7 @@ const uploadOnCloudinary = async (localFilePath) => {
     fs.unlinkSync(localFilePath);
 
     // TESTING
-    console.log("CLOUDINARY RESPONSE: ", response);
+    // console.log("CLOUDINARY RESPONSE: ", response);
     return response;
   } catch (error) {
     fs.unlinkSync(localFilePath); // remove the local copy of file as upload has failed
