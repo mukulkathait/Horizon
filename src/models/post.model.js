@@ -1,5 +1,19 @@
 import mongoose, { Schema } from "mongoose";
 
-const postSchema = Schema({});
+const postSchema = Schema(
+  {
+    content: {
+      type: String,
+      required: true,
+    },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 export const Post = mongoose.model("Post", postSchema);
